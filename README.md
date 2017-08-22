@@ -522,6 +522,11 @@ $builder->debug();
 History Log
 ------------------
     
+- 1.1.0 -- 2017-08-22
+
+    - update OnTheFlyFormStep now accepts callback as form 
+    - add StepFormBuilderInterface.setActiveStep method 
+    
 - 1.0.2 -- 2017-08-22
 
     - removed debug strings in StepFormBuilder 

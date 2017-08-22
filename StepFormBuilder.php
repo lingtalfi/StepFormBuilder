@@ -125,6 +125,13 @@ class StepFormBuilder implements StepFormBuilderInterface
         $this->error("Unknown step with id $id");
     }
 
+    public function setActiveStep($id)
+    {
+        $this->getPool()->setPoolValue('active', $id);
+        return $this;
+    }
+
+
 
 
     //--------------------------------------------
@@ -180,6 +187,8 @@ class StepFormBuilder implements StepFormBuilderInterface
 
 
             $activeId = $pool['active'];
+
+
             if (null === $activeId) {
                 $activeId = $this->getFirstStepId();
             }

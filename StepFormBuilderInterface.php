@@ -56,6 +56,9 @@ interface StepFormBuilderInterface
     public function getStepKey();
 
 
+    public function setActiveStep($id);
+
+
     /**
      * Defines a group of steps.
      *

@@ -24,19 +24,18 @@ class OnTheFlyFormStep extends Step
 
     public function isPosted()
     {
-        $this->check();
-        return $this->form->isPosted();
+        return $this->getForm()->isPosted();
     }
 
     public function getModel(array $defaultValues)
     {
-        $this->form->inject($defaultValues, true);
-        return $this->form->getModel();
+        $this->getForm()->inject($defaultValues, true);
+        return $this->getForm()->getModel();
     }
 
     public function isValid(array $data)
     {
-        $ret = $this->form->validate();
+        $ret = $this->getForm()->validate();
         if (true === $ret) {
             $this->onSuccessfulValidateAfter($data);
         }
@@ -45,18 +44,22 @@ class OnTheFlyFormStep extends Step
 
     public function inject(array $data)
     {
-        return $this->form->inject($data);
+        return $this->getForm()->inject($data);
     }
 
     public function getData()
     {
-        return $this->form->getData();
+        return $this->getForm()->getData();
     }
 
     //--------------------------------------------
     //
     //--------------------------------------------
-    public function setForm(OnTheFlyFormInterface $form)
+    /**
+     * @param $form , callable returning an OnTheFlyFormInterface instance, or a OnTheFlyFormInterface instance
+     * @return $this
+     */
+    public function setForm($form)
     {
         $this->form = $form;
         return $this;
@@ -73,11 +76,15 @@ class OnTheFlyFormStep extends Step
     //--------------------------------------------
     //
     //--------------------------------------------
-    private function check()
+    private function getForm()
     {
         if (null === $this->form) {
             throw new StepFormBuilderException("OnTheFlyForm instance not set");
         }
+        if (!$this->form instanceof OnTheFlyFormInterface) {
+            $this->form = call_user_func($this->form);
+        }
+        return $this->form;
     }
 }
 
