@@ -36,7 +36,11 @@ class OnTheFlyFormStep extends Step
 
     public function isValid(array $data)
     {
-        return $this->form->validate();
+        $ret = $this->form->validate();
+        if (true === $ret) {
+            $this->onSuccessfulValidateAfter($data);
+        }
+        return $ret;
     }
 
     public function inject(array $data)
@@ -49,10 +53,6 @@ class OnTheFlyFormStep extends Step
         return $this->form->getData();
     }
 
-
-
-
-
     //--------------------------------------------
     //
     //--------------------------------------------
@@ -60,6 +60,14 @@ class OnTheFlyFormStep extends Step
     {
         $this->form = $form;
         return $this;
+    }
+
+    //--------------------------------------------
+    //
+    //--------------------------------------------
+    protected function onSuccessfulValidateAfter(array $data)
+    {
+
     }
 
     //--------------------------------------------

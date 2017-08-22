@@ -522,6 +522,10 @@ $builder->debug();
 History Log
 ------------------
     
+- 1.0.1 -- 2017-08-22
+
+    - add OnTheFlyFormStep.onSuccessfulValidateAfter protected method
+    
 - 1.0.0 -- 2017-08-22
 
     - initial commit
