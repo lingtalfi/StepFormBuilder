@@ -522,6 +522,10 @@ $builder->debug();
 History Log
 ------------------
     
+- 1.0.2 -- 2017-08-22
+
+    - removed debug strings in StepFormBuilder 
+    
 - 1.0.1 -- 2017-08-22
 
     - add OnTheFlyFormStep.onSuccessfulValidateAfter protected method

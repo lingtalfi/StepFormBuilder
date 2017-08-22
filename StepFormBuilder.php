@@ -222,18 +222,13 @@ class StepFormBuilder implements StepFormBuilderInterface
                      */
                     if ($step->isPosted()) {
 
-                        a("posted $id");
-
                         if (array_key_exists($this->prevKey, $data)) { // prev step
-                            a("prevkey: $lastId");
+
                             if (null !== $lastId) {
 
 
                                 $fId = $this->getFirstGroupElement($id);
                                 $fLast = $this->getFirstGroupElement($lastId);
-
-                                a("id=$id, last=$lastId");
-                                a("fId=$fId, fLast=$fLast");
 
                                 if (false !== $fLast && $fLast !== $fId) {
                                     $activeId = $fLast;
@@ -262,8 +257,6 @@ class StepFormBuilder implements StepFormBuilderInterface
                                 $this->getPool()->setPoolStepDone($id, true);
 
                                 $nextStepId = $this->getNextStepId($id);
-                                a("valid $id, nextStep=$nextStepId");
-
 
                                 if (false === $nextStepId) {
                                     $this->onStepsCompletedAfter($this->getFlatPoolStepData());
