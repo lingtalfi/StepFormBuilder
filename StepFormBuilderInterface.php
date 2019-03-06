@@ -1,10 +1,10 @@
 <?php
 
 
-namespace StepFormBuilder;
+namespace Ling\StepFormBuilder;
 
 
-use StepFormBuilder\Step\StepInterface;
+use Ling\StepFormBuilder\Step\StepInterface;
 
 interface StepFormBuilderInterface
 {

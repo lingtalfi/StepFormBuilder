@@ -1,11 +1,11 @@
 <?php
 
 
-namespace StepFormBuilder\Step;
+namespace Ling\StepFormBuilder\Step;
 
 
-use OnTheFlyForm\OnTheFlyFormInterface;
-use StepFormBuilder\Exception\StepFormBuilderException;
+use Ling\OnTheFlyForm\OnTheFlyFormInterface;
+use Ling\StepFormBuilder\Exception\StepFormBuilderException;
 
 class OnTheFlyFormStep extends Step
 {

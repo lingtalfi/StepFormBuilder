@@ -1,7 +1,7 @@
 <?php
 
 
-namespace StepFormBuilder\Step;
+namespace Ling\StepFormBuilder\Step;
 
 
 class MockStep extends Step

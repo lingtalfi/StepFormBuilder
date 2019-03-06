@@ -1,11 +1,11 @@
 <?php
 
 
-namespace StepFormBuilder\Pool;
+namespace Ling\StepFormBuilder\Pool;
 
 
 
-use Bat\SessionTool;
+use Ling\Bat\SessionTool;
 
 class SessionPool implements PoolInterface
 {

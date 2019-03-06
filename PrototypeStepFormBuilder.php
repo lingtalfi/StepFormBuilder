@@ -1,7 +1,7 @@
 <?php
 
 
-namespace StepFormBuilder;
+namespace Ling\StepFormBuilder;
 
 
 class PrototypeStepFormBuilder extends StepFormBuilder

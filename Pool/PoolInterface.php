@@ -1,7 +1,7 @@
 <?php
 
 
-namespace StepFormBuilder\Pool;
+namespace Ling\StepFormBuilder\Pool;
 
 
 /**

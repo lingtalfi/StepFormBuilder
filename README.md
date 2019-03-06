@@ -17,7 +17,7 @@ Install
 ==========
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
-uni import StepFormBuilder
+uni import Ling/StepFormBuilder
 ```
 
 Or just download it and place it where you want otherwise.
@@ -86,19 +86,19 @@ autoloader)
 ```php 
 <?php
 
-use Authenticate\SessionUser\SessionUser;
-use Bat\SessionTool;
+use Ling\Authenticate\SessionUser\SessionUser;
+use Ling\Bat\SessionTool;
 use Module\Ekom\Api\EkomApi;
 use Module\Ekom\Utils\OrderBuilder\OrderBuilder;
 use Module\Ekom\Utils\OrderBuilder\Step\MockOrderBuilderStep;
 use Module\EkomUserProductHistory\Api\EkomUserProductHistoryApi;
 use Module\EkomUserProductHistory\UserProductHistory\Entry\Entry;
 use Module\EkomUserProductHistory\UserProductHistory\FileSystemUserProductHistory;
-use OnTheFlyForm\Helper\OnTheFlyFormHelper;
-use OnTheFlyForm\OnTheFlyForm;
-use StepFormBuilder\PrototypeStepFormBuilder;
-use StepFormBuilder\Step\OnTheFlyFormStep;
-use StepFormBuilder\StepFormBuilderInterface;
+use Ling\OnTheFlyForm\Helper\OnTheFlyFormHelper;
+use Ling\OnTheFlyForm\OnTheFlyForm;
+use Ling\StepFormBuilder\PrototypeStepFormBuilder;
+use Ling\StepFormBuilder\Step\OnTheFlyFormStep;
+use Ling\StepFormBuilder\StepFormBuilderInterface;
 
 
 require_once __DIR__ . "/../boot.php";

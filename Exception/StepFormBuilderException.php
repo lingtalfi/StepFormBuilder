@@ -1,7 +1,7 @@
 <?php
 
 
-namespace StepFormBuilder\Exception;
+namespace Ling\StepFormBuilder\Exception;
 
 
 class StepFormBuilderException extends \Exception
